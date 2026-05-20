@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Zarr_ajaaaa Website
+  </title>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="shotcut icon" type="x-icon" href="img/homepage/body - header/x-icon.jpg">
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: hsl(228, 24%, 16%);
+            color: hsl(228, 18%, 96%);
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 20px auto;
+            background-color: black;
+        }
+        
+        .subtitle {
+          margin: 20px 0 25px;
+          margin-top: -10px;
+          font-size: 30px;
+          font-weight: bold;
+          user-select: none;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0 10px;
+            margin-top: 40px;
+            user-select: none;
+        }
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: hsl(228, 70%, 63%);
+            border-radius: 25px;
+            padding: 10px 20px;
+            margin: 10px 0;
+            text-decoration: none;
+            color: hsl(228, 18%, 96%);
+            font-size: 20px;
+            font-weight: normal;
+            user-select: none;
+        }
+        
+         .link img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            user-select: none;
+         }
+         
+         i {
+           font-size: 25px;
+           user-select: none;
+         }
+         
+         
+        .link i {
+            margin-right: 10px;
+            user-select: none;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 12px;
+            user-select: none;
+        }
+        .footer img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            user-select: none;
+        }
+        .cookie-preferences {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            user-select: none;
+        }
+        
+        .date-created {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            user-select: none;
+        }
+        
+         .footer-container {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            user-select: none;
+        }
+        .description {
+          margin-top: -15px;
+          user-select: none;
+        }
+        .copy-notification {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #36ff0e;
+        color: black;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: none;
+        font-size: 14px;
+        user-select: none;
+        font-weight: bold;
+    }
+    
+            .sidebar-content {
+            width: 88%;
+            max-width: 500px;
+            background-color: hsl(228, 24%, 16%);
+            border-radius: 20px;
+            box-shadow: 0 0 10px hsla(228, 80%, 4%, .3);
+            padding: 20px;
+            margin-left: 10px;
+            text-align: center;
+            z-index: 1000;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 18px;
+            margin: 0;
+        }
+        .header .close {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .content {
+            background-color: hsl(228, 70%, 63%);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            color: hsl(228, 18%, 96%);
+        }
+        .content img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            background-color: black;
+        }
+        .content h2 {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .content p {
+            font-size: 14px;
+            font-weight: bold;
+            color: hsl(228, 18%, 85%);
+            margin: 10px 0;
+        }
+        .content .more {
+            font-size: 14px;
+            color: hsl(228, 18%, 96%);
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .footer-content .icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: hsl(228, 18%, 96%);
+        }
+        .footer-content .icon i {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        #sidebar a {
+          color: hsl(228, 18%, 96%);
+          text-decoration: none;
+          pointer-events: none;
+        }
+        #sidebar h2 {
+          user-select: none;
+        }
+        #sidebar p {
+          user-select: none;
+        }
+        
+        #sidebar {
+    position: fixed;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 88%;
+    max-width: 500px;
+    transition: bottom 0.3s ease;
+    z-index: 10000;
+}
+        @media screen and (max-width: 768px) {
+            .link {
+                font-size: 16px;
+                padding: 8px 15px;
+            }
+            .footer-container {
+                font-size: 10px;
+            }
+            .profile-img {
+                width: 80px;
+                height: 80px;
+            }
+            .subtitle {
+                font-size: 24px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .link {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+            .footer-container {
+                font-size: 8px;
+            }
+            .profile-img {
+                width: 70px;
+                height: 70px;
+            }
+            .subtitle {
+                font-size: 20px;
+            }
+        }
+    
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <img alt="Profile image of a character with spiky hair" class="profile-img" height="100" src="https://i.ibb.co.com/GfKn2WwP/IMG-20250913-141310-222.webp" width="100"/>
+   <div class="subtitle">
+   Zarr_ajaaaa
+   </div>
+   <div class="description">
+    All the information is here
+   </div>
+   <div class="section-title">
+    Social Media Zarr
+   </div>
+   <a class="link" href="https://tinyurl.com/Zarr96" data-title="WhatsApp Channels" data-description="Follow this WhatsApp channel !">
+    <i class="fab fa-whatsapp">
+    </i>
+    WhatsApp Channels
+    <i class="fas fa-ellipsis-h" onclick="openSidebar()"></i>
+    </i>
+   </a>
+   <a class="link" href="https://t.me/zarr_ajaaaa" data-title="Discord Community" data-description="Join the Developer Discord Community to Stay Updated !">
+    <i class="fab fa-telegram"></i>
+    </i>
+    Telegram Channels
+    <i class="fas fa-ellipsis-h" onclick="openSidebar()"></i>
+    </i>
+   </a>
+   <a class="link" href="https://id.pinterest.com/ruiresyan" data-title="Pinterest" data-description="Follow this account to discover inspiration, creative ideas, and more !">
+    <i class="fab fa-pinterest">
+    </i>
+    <!-- <img src="https://storage.googleapis.com/a1aa/image/fuLQoNIQMSWjDX5EWqotu6goZpa9H9H58PiufnQC4-I.jpg" alt="Pinterest"/>
+   -->
+    Pinterest
+    <i class="fas fa-ellipsis-h" onclick="openSidebar()"></i>
+    </i>
+   </a>
+   
+      <a class="link" href="https://www.youtube.com/@Zarr_ajaaaa96" data-title="Youtube Channels" data-description=" Subscribe to the Developer's Channel to get information about WhatsApp bot script updates and more.">
+    <i class="fab fa-youtube">
+    </i>
+    Youtube Channels
+    <i class="fas fa-ellipsis-h" onclick="openSidebar()"></i>
+    </i>
+   </a>
+   <a class="link" href="https://sociabuzz.com/zarr_ajaaaa" data-title="Saweria" data-description="Support Developers, So They Can Be More Enthusiastic To Work For You !">
+    <i class="fas fa-donate">
+    </i>
+    Saweria
+    <i class="fas fa-ellipsis-h" onclick="openSidebar()"></i>
+    </i>
+   </a>
+  </div>
+ 
+  <div class="footer-container">
+     
+     <!-- <img alt="Linktree logo" height="20" src="https://storage.googleapis.com/a1aa/image/h3D6fKy_noHmSqT9CEQWbe8XI1S7E0aDi5EXJoJwIBg.jpg" width="20"/> -->
+  </div>
+  <div id="sidebar" class="sidebar">
+      <div class="sidebar-content">
+   <div class="header">
+    <h1>
+     Share link
+    </h1>
+<div class="close" onclick="closeSidebar()">×</div>
+   </div>
+   <div class="content">
+    <img alt="Logo with blue and white text on a black background" height="80" src="https://storage.googleapis.com/a1aa/image/dV1qBq_0NQ3PtqnHaLNLZJ219BvEyYOwsLTojaZmC2M.jpg" width="80"/>
+    <h2>
+      none
+    </h2>
+    <a>
+      none
+    </a>
+    <p>
+      none
+    </p>
+    <!-- <div class="more">
+     More
+    </div> -->
+   </div>
+   <div class="footer-content">
+    <div class="icon">
+     <i class="fas fa-copy">
+     </i>
+     <span>
+       Copy Link
+     </span>
+    </div>
+   <!--
+    <div class="icon">
+     <i class="fab fa-facebook">
+     </i>
+     <span>
+      Facebook
+     </span>
+    </div>
+    <div class="icon">
+     <i class="fab fa-whatsapp">
+     </i>
+     <span>
+      WhatsApp
+     </span>
+    </div>
+    <div class="icon">
+     <i class="fab fa-linkedin">
+     </i>
+     <span>
+      LinkedIn
+     </span>
+    </div>
+    <div class="icon">
+     <i class="fab fa-facebook-messenger">
+     </i>
+     <span>
+      Messenger
+     </span>
+    </div>
+    <div class="icon">
+     <i class="fas fa-share-alt">
+     </i>
+     <span>
+      Share
+     </span>
+    </div>
+    -->
+   </div>
+  </div>
+  </div>
+  
+  <div id="copy-notification" class="copy-notification">
+    Link Copied Successfully!
+</div>
+ </body>
+ <script>
+ // Fungsi untuk membuka sidebar dengan data dari ikon yang diklik
+function openSidebarFromIcon(iconElement) {
+    let parentLink = iconElement.closest("a.link");
+    if (!parentLink) return;
+
+    let title = parentLink.getAttribute("data-title") || parentLink.textContent.trim();
+    let href = parentLink.getAttribute("");
+    let description = parentLink.getAttribute("data-description") || parentLink.textContent.trim();
+    let profileImgSrc = document.querySelector(".profile-img").getAttribute("src");
+
+    // Perbarui isi sidebar dengan data dari link yang diklik
+    document.querySelector("#sidebar h2").innerText = title;
+    let sidebarLink = document.querySelector("#sidebar a");
+    sidebarLink.setAttribute("href", href);
+    sidebarLink.innerText = href;
+    document.querySelector("#sidebar p").innerText = description;
+    document.querySelector("#sidebar .content img").setAttribute("src", profileImgSrc);
+
+    // Tampilkan sidebar
+    let sidebar = document.getElementById("sidebar");
+    sidebar.style.bottom = "20px";
+    sidebar.setAttribute("data-open", "true");
+}
+
+// Fungsi untuk menutup sidebar
+function closeSidebar() {
+    let sidebar = document.getElementById("sidebar");
+    sidebar.style.bottom = "-100%";
+    sidebar.setAttribute("data-open", "false");
+}
+
+// Fungsi untuk menyalin teks dengan format khusus
+function copyLink() {
+    let sidebarLink = document.querySelector("#sidebar a").getAttribute("href");
+
+    if (sidebarLink) {
+        let textToCopy = `Share This With Your Friends !\n${sidebarLink}`;
+        let tempInput = document.createElement("textarea");
+        tempInput.value = textToCopy;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+
+        // Tampilkan notifikasi bahwa teks berhasil disalin
+        let notification = document.getElementById("copy-notification");
+        notification.style.display = "block";
+        setTimeout(() => {
+            notification.style.display = "none";
+        }, 2000);
+    }
+}
+
+// Tambahkan event listener ke ikon ellipsis untuk membuka sidebar
+document.querySelectorAll(".fa-ellipsis-h").forEach(icon => {
+    icon.addEventListener("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        openSidebarFromIcon(this);
+    });
+});
+
+// Tambahkan event listener ke ikon "Copy" untuk menyalin link
+document.querySelector(".fa-copy").addEventListener("click", function () {
+    copyLink();
+});
+
+// Tambahkan event listener ke ikon WhatsApp untuk berbagi ke WhatsApp
+document.querySelector(".fa-whatsapp").addEventListener("click", function () {
+    shareToWhatsApp();
+});
+
+// Tutup sidebar jika klik di luar sidebar-content
+document.addEventListener("click", function (event) {
+    let sidebar = document.getElementById("sidebar");
+    let sidebarContent = document.querySelector(".sidebar-content");
+
+    if (
+        sidebar.getAttribute("data-open") === "true" &&
+        !sidebarContent.contains(event.target) &&
+        !event.target.classList.contains("fa-ellipsis-h") &&
+        !event.target.closest(".sidebar-content")
+    ) {
+        closeSidebar();
+    }
+});
+
+// Pastikan ikon "x" bisa menutup sidebar
+document.querySelector(".close").addEventListener("click", function () {
+    closeSidebar();
+});
+</script>
+
+
+</html>
